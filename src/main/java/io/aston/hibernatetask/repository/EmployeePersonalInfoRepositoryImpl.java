@@ -2,9 +2,7 @@ package io.aston.hibernatetask.repository;
 
 import io.aston.hibernatetask.dto.employeepersonalinfo.EmployeePersonalInfoDTO;
 import io.aston.hibernatetask.entity.EmployeePersonalInfo;
-import io.aston.hibernatetask.entity.EmployeeRole;
 import io.aston.hibernatetask.mapper.EmployeePersonaInfoMapper;
-import io.aston.hibernatetask.mapper.EmployeeRoleMapper;
 import io.aston.hibernatetask.repository.interfaces.EmployeePersonalInfoRepository;
 import io.aston.hibernatetask.utility.HibernateSessionFactoryUtil;
 import lombok.Data;

@@ -37,7 +37,7 @@ public class EmployeeRoleController {
     @ResponseStatus(HttpStatus.CREATED)
     public EmployeeRole save(@RequestBody EmployeeRoleDTO employeeRoleDTO) {
         EmployeeRole employeeRole = employeeRoleService.save(employeeRoleDTO);
-        log.info(Constants.EMPLOYEE_ROLE + Constants.FOUND + employeeRole);
+        log.info(Constants.EMPLOYEE_ROLE + Constants.SUCCESSFUL_SAVE + employeeRole);
         return employeeRole;
     }
 

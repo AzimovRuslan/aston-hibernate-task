@@ -27,7 +27,6 @@ public class EmployeePersonalInfoController {
         if (employeePersonalInfo == null) {
             log.error(Constants.INCORRECT_ID + Constants.REQUEST_FAILED);
             throw new IncorrectInputException(Constants.INCORRECT_ID);
-
         }
 
         log.info(Constants.EMPLOYEE_PERSONAL_INFO + Constants.FOUND + Constants.WITH_ID + id);
@@ -38,7 +37,7 @@ public class EmployeePersonalInfoController {
     @ResponseStatus(HttpStatus.CREATED)
     public EmployeePersonalInfo save(@RequestBody EmployeePersonalInfoDTO employeePersonalInfoDTO) {
         EmployeePersonalInfo employeePersonalInfo = employeePersonalInfoService.save(employeePersonalInfoDTO);
-        log.info(Constants.EMPLOYEE_PERSONAL_INFO + Constants.FOUND + employeePersonalInfo);
+        log.info(Constants.EMPLOYEE_PERSONAL_INFO + Constants.SUCCESSFUL_SAVE + employeePersonalInfo);
         return employeePersonalInfo;
     }
 
