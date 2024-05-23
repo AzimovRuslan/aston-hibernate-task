@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Data
-public class EmployeeRoleMapper implements IMapper<EmployeeRole, EmployeeRoleDTO>{
+public class EmployeeRoleMapper implements IMapper<EmployeeRole, EmployeeRoleDTO> {
     private final ModelMapper modelMapper;
 
     @Override
-    public EmployeeRoleDTO toDto(EmployeeRole employeeRole){
+    public EmployeeRoleDTO toDto(EmployeeRole employeeRole) {
         return modelMapper.map(employeeRole, EmployeeRoleDTO.class);
     }
 

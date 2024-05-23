@@ -7,6 +7,6 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @Setter
 public class EmployeeRoleDTO {
-    @NotBlank(message = "name can't be empty")
+    @NotBlank(message = "role can't be empty")
     private String role;
 }

@@ -11,19 +11,19 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Data
-public class EmployeeMapper implements IMapper<Employee, EmployeeDTO>{
+public class EmployeeMapper implements IMapper<Employee, EmployeeDTO> {
 
     private final ModelMapper modelMapper;
     private final EmployeeRoleService employeeRoleService;
     private final EmployeePersonalInfoService employeePersonalInfoService;
 
     @Override
-    public EmployeeDTO toDto(Employee employee){
+    public EmployeeDTO toDto(Employee employee) {
         return modelMapper.map(employee, EmployeeDTO.class);
     }
 
     @Override
-    public Employee toEntity(EmployeeDTO employeeDTO){
+    public Employee toEntity(EmployeeDTO employeeDTO) {
         return modelMapper.map(employeeDTO, Employee.class);
     }
 

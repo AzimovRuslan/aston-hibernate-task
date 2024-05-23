@@ -3,6 +3,7 @@ package io.aston.hibernatetask.utility;
 import io.aston.hibernatetask.entity.Employee;
 import io.aston.hibernatetask.entity.EmployeePersonalInfo;
 import io.aston.hibernatetask.entity.EmployeeRole;
+import io.aston.hibernatetask.entity.Project;
 import io.aston.hibernatetask.exception.FailedToReceiveSessionFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
@@ -18,6 +19,7 @@ public class HibernateSessionFactoryUtil {
         try {
             sessionFactory = getSessionFactory();
         } catch (RuntimeException e) {
+            log.error(e.getMessage());
             throw new FailedToReceiveSessionFactory(e.getMessage());
         }
     }
@@ -32,6 +34,7 @@ public class HibernateSessionFactoryUtil {
             configuration.addAnnotatedClass(EmployeeRole.class);
             configuration.addAnnotatedClass(EmployeePersonalInfo.class);
             configuration.addAnnotatedClass(Employee.class);
+            configuration.addAnnotatedClass(Project.class);
             StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
             sessionFactory = configuration.buildSessionFactory(builder.build());
             return sessionFactory;

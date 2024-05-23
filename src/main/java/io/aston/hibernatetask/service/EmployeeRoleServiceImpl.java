@@ -7,12 +7,19 @@ import io.aston.hibernatetask.service.interfaces.EmployeeRoleService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class EmployeeRoleServiceImpl implements EmployeeRoleService {
 
     private final EmployeeRoleRepository employeeRoleRepository;
 
+
+    @Override
+    public List<EmployeeRole> getAll() {
+        return employeeRoleRepository.getAll();
+    }
 
     @Override
     public EmployeeRole getById(Long id) {

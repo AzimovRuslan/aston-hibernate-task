@@ -10,12 +10,21 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/v0/employees")
 @AllArgsConstructor
 @Slf4j
 public class EmployeeController {
+
     private final EmployeeService employeeService;
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.FOUND)
+    public List<Employee> getAll() {
+        return employeeService.getAll();
+    }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.FOUND)

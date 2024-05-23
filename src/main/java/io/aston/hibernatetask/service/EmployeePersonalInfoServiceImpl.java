@@ -7,12 +7,19 @@ import io.aston.hibernatetask.service.interfaces.EmployeePersonalInfoService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class EmployeePersonalInfoServiceImpl implements EmployeePersonalInfoService {
 
     private final EmployeePersonalInfoRepository employeePersonalInfoRepository;
 
+
+    @Override
+    public List<EmployeePersonalInfo> getAll() {
+        return employeePersonalInfoRepository.getAll();
+    }
 
     @Override
     public EmployeePersonalInfo getById(Long id) {

@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/v0/employee-roles")
 @AllArgsConstructor
@@ -17,6 +19,12 @@ import org.springframework.web.bind.annotation.*;
 public class EmployeeRoleController {
 
     private final EmployeeRoleService employeeRoleService;
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.FOUND)
+    public List<EmployeeRole> getAll() {
+        return employeeRoleService.getAll();
+    }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.FOUND)

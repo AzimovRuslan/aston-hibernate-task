@@ -9,11 +9,20 @@ import lombok.Data;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 @Data
 public class EmployeePersonalInfoRepositoryImpl implements EmployeePersonalInfoRepository {
 
     private final EmployeePersonaInfoMapper employeePersonaInfoMapper;
+
+    @Override
+    public List<EmployeePersonalInfo> getAll() {
+        try (Session session = HibernateSessionFactoryUtil.getSession()) {
+            return session.createQuery("from EmployeePersonalInfo", EmployeePersonalInfo.class).list();
+        }
+    }
 
     @Override
     public EmployeePersonalInfo getById(Long id) {
