@@ -10,8 +10,6 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class EmployeeRoleMapper {
-
-    @Autowired
     private final ModelMapper modelMapper;
 
     public EmployeeRoleDTO toDto(EmployeeRole employeeRole){

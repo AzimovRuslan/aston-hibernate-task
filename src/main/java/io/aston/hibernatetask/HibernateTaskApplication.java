@@ -11,12 +11,6 @@ public class HibernateTaskApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(HibernateTaskApplication.class, args);
-
-//        EmployeeRoleRepository employeeRoleRepository1 = new EmployeeRoleRepositoryImpl();
-//        System.out.println(employeeRoleRepository1.getById(1L));
-//
-//        EmployeeRoleRepository employeeRoleRepository2 = new EmployeeRoleRepositoryImpl();
-//        System.out.println(employeeRoleRepository2.getById(2L));
     }
 
 }

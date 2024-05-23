@@ -1,9 +1,9 @@
-package io.aston.hibernatetask.repository.interfaces;
+package io.aston.hibernatetask.service.interfaces;
 
 import io.aston.hibernatetask.dto.employeerole.EmployeeRoleDTO;
 import io.aston.hibernatetask.entity.EmployeeRole;
 
-public interface EmployeeRoleRepository {
+public interface EmployeeRoleService {
     EmployeeRole getById(Long id);
 
     EmployeeRole save(EmployeeRoleDTO employeeRoleDTO);
