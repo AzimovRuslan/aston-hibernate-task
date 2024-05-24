@@ -6,7 +6,8 @@ TECHNOLOGY STACK
 - PostgreSQL
 
 DB DIAGRAM
-![image](https://github.com/AzimovRuslan/aston-hibernate-task/assets/55226276/968c9832-fd5a-4ce8-916a-fcb6c1c36ec0)
+![image](https://github.com/AzimovRuslan/aston-hibernate-task/assets/55226276/3788d041-f9cc-4652-8283-c253a0481801)
+
 
 ENDPOINTS DESCRIPTION
 _______________________________________________________________________________________
