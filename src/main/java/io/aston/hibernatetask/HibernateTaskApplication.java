@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Demo11Application {
+public class HibernateTaskApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Demo11Application.class, args);
+        SpringApplication.run(HibernateTaskApplication.class, args);
     }
 
 }
